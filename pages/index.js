@@ -1,209 +1,148 @@
 import Head from 'next/head'
+import Theme from './Theme'
+import { Box, Flex, Text, Image, List, ListItem, Button, Grid, Heading, PseudoBox, Icon } from '@chakra-ui/core'
+import { useState, useEffect } from 'react'
 
 export default function Home() {
+
   return (
-    <div className="container">
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main>
-        <h1 className="title">
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className="description">
-          Get started by editing <code>pages/index.js</code>
-        </p>
-
-        <div className="grid">
-          <a href="https://nextjs.org/docs" className="card">
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className="card">
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/zeit/next.js/tree/master/examples"
-            className="card"
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="card"
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className="logo" />
-        </a>
-      </footer>
-
-      <style jsx>{`
-        .container {
-          min-height: 100vh;
-          padding: 0 0.5rem;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
-
-        main {
-          padding: 5rem 0;
-          flex: 1;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
-
-        footer {
-          width: 100%;
-          height: 100px;
-          border-top: 1px solid #eaeaea;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-
-        footer img {
-          margin-left: 0.5rem;
-        }
-
-        footer a {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-
-        a {
-          color: inherit;
-          text-decoration: none;
-        }
-
-        .title a {
-          color: #0070f3;
-          text-decoration: none;
-        }
-
-        .title a:hover,
-        .title a:focus,
-        .title a:active {
-          text-decoration: underline;
-        }
-
-        .title {
-          margin: 0;
-          line-height: 1.15;
-          font-size: 4rem;
-        }
-
-        .title,
-        .description {
-          text-align: center;
-        }
-
-        .description {
-          line-height: 1.5;
-          font-size: 1.5rem;
-        }
-
-        code {
-          background: #fafafa;
-          border-radius: 5px;
-          padding: 0.75rem;
-          font-size: 1.1rem;
-          font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-            DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
-        }
-
-        .grid {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          flex-wrap: wrap;
-
-          max-width: 800px;
-          margin-top: 3rem;
-        }
-
-        .card {
-          margin: 1rem;
-          flex-basis: 45%;
-          padding: 1.5rem;
-          text-align: left;
-          color: inherit;
-          text-decoration: none;
-          border: 1px solid #eaeaea;
-          border-radius: 10px;
-          transition: color 0.15s ease, border-color 0.15s ease;
-        }
-
-        .card:hover,
-        .card:focus,
-        .card:active {
-          color: #0070f3;
-          border-color: #0070f3;
-        }
-
-        .card h3 {
-          margin: 0 0 1rem 0;
-          font-size: 1.5rem;
-        }
-
-        .card p {
-          margin: 0;
-          font-size: 1.25rem;
-          line-height: 1.5;
-        }
-
-        .logo {
-          height: 1em;
-        }
-
-        @media (max-width: 600px) {
-          .grid {
-            width: 100%;
-            flex-direction: column;
-          }
-        }
-      `}</style>
-
-      <style jsx global>{`
-        html,
-        body {
-          padding: 0;
-          margin: 0;
-          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-            Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-            sans-serif;
-        }
-
-        * {
-          box-sizing: border-box;
-        }
-      `}</style>
-    </div>
+    <Box>
+      {/* HEADER */}
+      {/* 1 */}
+      <Box h='100vh'>
+        <Box mx={{md: 120, sm: 0}}>
+          <Flex
+            alignItems="stretch"
+            flexDirection="row"
+            justifyContent="space-around">
+            <Box display="flex" width="100%" flexDirection="column"
+              height="100vh"
+              justifyContent="center">
+              <Text as="h1" fontSize="5xl">Platform pendukung terciptanya Smart City di Indonesia</Text>
+              <Text mt={5} fontSize='md' color="gray.500">Informasi Layanan Publik Pemerintahan dapat diakses dalam satu aplikasi e-government </Text>
+              <Flex mt={10}>
+                <Button leftIcon='chat' variantColor="teal" size='lg'>Hubungi</Button>
+                <Button variant='ghost' size='lg'>Portofolio</Button>
+              </Flex>
+            </Box>
+            <Box display="flex" width="100%" />
+          </Flex>
+        </Box>
+      </Box>
+      {/* 2 */}
+      <Box>
+        <Box mx={{md: 120, sm: 0}}>
+          <Flex
+            flexDirection="column"
+            justifyContent="flex-start"
+            display="flex"
+            alignItems="center">
+            <Heading>Our Service</Heading>
+            <Text>Diciptakan untuk Pemerintah dan Masyarakat</Text>
+          </Flex>
+          <Flex>
+            <PseudoBox width="100%" p={50} border='1px' borderColor='gray.100' 
+              _hover={{boxShadow:"0px 0px 16px 3px rgba(0,0,0,0.09)"}}
+              cursor='pointer'>
+              <Text textAlign='center'>Peta Wisata</Text>
+              <Text textAlign='center' color="gray.500" mt={5}>Informasi terkait destinasi pariwisata, kuliner, hotel, dan tempat belanja</Text>
+            </PseudoBox>
+            <PseudoBox width="100%" p={50} border='1px' borderColor='gray.100' 
+              _hover={{boxShadow:"0px 0px 16px 3px rgba(0,0,0,0.09)"}}
+              cursor='pointer'>
+              <Text textAlign='center'>Flight Information</Text>
+              <Text textAlign='center'  color="gray.500" mt={5}>Informasi jadwal keberangkatan dan kedatangan pesawat.</Text>
+            </PseudoBox>
+            <PseudoBox width="100%" p={50} border='1px' borderColor='gray.100' 
+              _hover={{boxShadow:"0px 0px 16px 3px rgba(0,0,0,0.09)"}}
+              cursor='pointer'>
+              <Text textAlign='center'>CCTV</Text>
+              <Text textAlign='center' color="gray.500" mt={5}>Keramaian lalu lintas dapat dipantau secara real time lewat CCTV.</Text>
+            </PseudoBox>
+          </Flex>
+          <Flex>
+            <PseudoBox width="100%" p={50} border='1px' borderColor='gray.100' 
+              _hover={{boxShadow:"0px 0px 16px 3px rgba(0,0,0,0.09)"}}
+              cursor='pointer'>
+              <Text textAlign='center'>Aspirasi</Text>
+              <Text textAlign='center' color="gray.500" mt={5}>Sarana menjembatani masyarakat dan pemerintah daerah</Text>
+            </PseudoBox>
+            <PseudoBox width="100%" p={50} border='1px' borderColor='gray.100' 
+              _hover={{boxShadow:"0px 0px 16px 3px rgba(0,0,0,0.09)"}}
+              cursor='pointer'>
+              <Text textAlign='center'>Info Harga Pangan</Text>
+              <Text textAlign='center' color="gray.500" mt={5}>Informasi harga komoditas pokok terintegrasi dengan DISPERINDAG.</Text>
+            </PseudoBox>
+            <PseudoBox width="100%" p={50} border='1px' borderColor='gray.100' 
+              _hover={{boxShadow:"0px 0px 16px 3px rgba(0,0,0,0.09)"}}
+              cursor='pointer'>
+              <Text textAlign='center'>Event Terkini</Text>
+              <Text textAlign='center' color="gray.500" mt={5}>Manajemen data konten dengan sangat mudah.</Text>
+            </PseudoBox>
+          </Flex>
+        </Box>
+      </Box>
+      {/* 3 */}
+      <Box>
+        <Box mx={{md: 120, sm: 0}} py={100}>
+          <Flex justifyContent="space-between">
+            <Image height="100px" width="100px" />
+            <Flex flexDirection="column" width="50%">
+              <Heading fontSize='2xl'>Smart Government</Heading>
+              <Text mt={5}>Menciptakan Smart Government dengan memberikan pelayanan publik kepada masyarakat yang dapat diakses dengan cepat dan mudah. Masyarakat dapat berperan aktif dan berpartisipasi dalam tata kelola kota, sehingga pemerintah daerah dapat membuat kebijakan yang lebih baik.</Text>
+              <List mt={5}>
+                <ListItem><Icon name="arrow-forward"/>&nbsp;&nbsp;Data Integration</ListItem>
+                <ListItem><Icon name="arrow-forward"/>&nbsp;&nbsp;Data Integration</ListItem>
+                <ListItem><Icon name="arrow-forward"/>&nbsp;&nbsp;Data Integration</ListItem>
+              </List>
+              <Flex mt={5}>
+                <Button leftIcon='chat' variantColor="teal">Hubungi Kami</Button>
+              </Flex>
+            </Flex>
+          </Flex>
+        </Box>
+      </Box>
+      {/* 4 */}
+      <Box>
+        <Box mx={{md: 120, sm: 0}}>
+          <Text textAlign="center">Our Client</Text>
+          <Flex justifyContent="center" alignItems="stretch">
+            <Image height="100px" width="100px" ml={5} mr={5} />
+            <Image height="100px" width="100px" ml={5} mr={5} />
+            <Image height="100px" width="100px" ml={5} mr={5} />
+          </Flex>
+        </Box>
+      </Box>
+      {/* FOOTER */}
+      <Box>
+        <Box mx={{md: 120, sm: 0}}>
+          <Grid templateColumns="repeat(4, 1fr)" gap={6}>
+            <Flex flexDirection="column">
+              <Image height="100px" width="100px" />
+              <Text>Text value</Text>
+            </Flex>
+            <Flex flexDirection="column">
+              <Text>About Us</Text>
+              <Text>Support Center</Text>
+              <Text>Customer Support</Text>
+              <Text>About Us</Text>
+              <Text>Copyright</Text>
+            </Flex>
+            <Flex flexDirection="column">
+              <Text>Our Information</Text>
+              <Text>Return Policy</Text>
+              <Text>Privacy Policy</Text>
+              <Text>Terms & Conditions</Text>
+              <Text>Site Map</Text>
+            </Flex>
+            <Flex flexDirection="column">
+              <Text>Policy</Text>
+              <Text>Security</Text>
+              <Text>Supply Chain</Text>
+            </Flex>
+          </Grid>
+        </Box>
+      </Box>
+    </Box>
   )
 }
