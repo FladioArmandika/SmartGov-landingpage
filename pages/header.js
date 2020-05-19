@@ -34,7 +34,6 @@ const Header = props => {
                 SmartGov
                 </Heading>
             </Flex>
-
             <Box display={{ sm: "block", md: "none" }} onClick={handleToggle}>
                 <svg
                     fill="white"
@@ -45,7 +44,6 @@ const Header = props => {
                     <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
                 </svg>
             </Box>
-
             <Box display={{ sm: show ? "block" : "none", md: "flex" }}
                 width={{ sm: "full", md: "auto" }}
                 alignItems="center"
