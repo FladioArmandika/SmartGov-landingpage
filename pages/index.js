@@ -8,8 +8,8 @@ export default function Home() {
   return (
     <Box>
       {/* HEADER */}
-      {/* 1 */}
-      <Box h='100vh'>
+      {/* 1 */}   
+      <Box h='90vh'>
         <Box mx={{md: 120, sm: 0}}>
           <Flex
             alignItems="stretch"
